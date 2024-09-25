@@ -1,0 +1,166 @@
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('https://www.transparenttextures.com/patterns/black-paper.png'); /* Subtle background pattern */
+    color: #f4f4f4; /* Light text color */
+}
+
+.flight-board-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem; /* Slightly smaller than before */
+    color: #FFD700; /* Yellow text, keeping the flight board theme */
+    letter-spacing: 1px; /* Subtle letter-spacing */
+    margin-bottom: 30px; /* Add more margin for separation */
+    font-weight: 500; /* Medium weight for a cleaner, modern look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow to make the text pop */
+}
+
+.flight-board-title i {
+    margin-right: 15px; /* Add space between icon and text */
+    font-size: 1.8rem; /* Adjust the icon size for better balance */
+    color: #FFD700; /* Same color as text */
+}
+
+.countdown-text {
+    text-align: center;
+    font-size: 1.2rem; /* Slightly smaller for a more subtle look */
+    margin-bottom: 30px; /* Add more space between countdown and the table */
+    color: #FFD700; /* Keep yellow color to match the theme */
+    font-weight: 500; /* Regular weight for a clean, modern look */
+    letter-spacing: 0.5px; /* Small letter spacing for a neat finish */
+    animation: fadein 1s; /* Add a subtle fade-in effect for countdown */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow to make the text pop */
+    
+}
+
+/* Keyframes for subtle fade-in animation */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1f2937; /* Darker background for the table body */
+    color: #f4f4f4;
+    font-size: 1rem;
+    margin-top: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow for better separation from the background */
+    border-radius: 10px; /* Rounded corners for the table */
+    overflow: hidden; /* Ensures table respects rounded corners */
+}
+
+/* Table Header */
+th {
+    background-color: #FFD700; /* Yellow header */
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 15px 12px; /* More padding for better spacing */
+    font-weight: bold;
+    border-bottom: 3px solid #444; /* Thicker border for clear separation */
+}
+
+/* Table Data Cells */
+td {
+    padding: 15px 12px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    transition: background-color 0.3s ease;
+}
+
+/* Alternate row background */
+tr:nth-child(even) {
+    background-color: #2b3747; /* Slightly lighter row for better readability */
+}
+
+/* Hover effect for rows */
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+    transform: scale(1.01); /* Subtle scale effect on hover */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Table Header on Hover */
+th:hover {
+    background-color: #f1c40f; /* Lighter yellow on hover */
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+td {
+    /* text-align: center; */
+    margin-bottom: 30px; /* Add more space between countdown and the table */
+    color: #FFD700; /* Keep yellow color to match the theme */
+    letter-spacing: 0.5px; /* Small letter spacing for a neat finish */
+    animation: fadein 1s; /* Add a subtle fade-in effect for countdown */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow to make the text pop */
+}
+
+
+
+/* Status colors */
+/* General status styling */
+.status {
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white; /* Set text to white by default */
+}
+
+/* On Time: Green background */
+.status.on-time {
+    background-color: #4CAF50;
+}
+
+/* Delayed: Orange background */
+.status.delayed {
+    background-color: #FF9800;
+}
+
+
+
+/* Departed: Gray background */
+.status.departed {
+    background-color: #9E9E9E;
+}
+
+/* Boarding: Blue background */
+
+
+/* Departed: Gray background */
+.status.departed {
+    background-color: #9E9E9E;
+}
+
+/* Cancelled: Red background */
+.status.cancelled {
+    background-color: #f44336;
+}
+
+/* Custom hover for clickable rows */
+.clickable-row:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+}
+
+
+
+/* Styling for the flight number link */
+.clickable-row {
+    cursor: pointer; /* Change cursor to pointer to indicate clickable rows */
+    transition: background-color 0.2s ease;
+}
+
+.clickable-row:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Highlight row on hover */
+}
